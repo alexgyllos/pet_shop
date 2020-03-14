@@ -77,3 +77,11 @@ def customer_can_afford_pet(id_of_customer, new_pet)
   end
   return false
 end
+
+def sell_pet_to_customer(shop, pet, customer)
+  add_pet_to_customer(customer, pet)
+  remove_pet_by_name(shop, pet)
+  increase_pets_sold(shop, 1)
+  remove_customer_cash(customer, pet[:price])
+  add_or_remove_cash(shop, pet[:price])
+end
