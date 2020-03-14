@@ -39,6 +39,7 @@ def find_pet_by_name(shop, name)
       return pets
     end
   end
+  return nil
 end
 
 # def add_pet_to_stock
