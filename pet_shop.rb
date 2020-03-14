@@ -33,7 +33,6 @@ def pets_by_breed(shop, breeds)
 end
 
 def find_pet_by_name(shop, name)
-  # pets_name = {}
   for pets in shop[:pets]
     if pets[:name] == name
       return pets
@@ -55,4 +54,8 @@ def add_pet_to_stock(shop, new_pet)
   total_pet = shop[:pets].count
   shop[:pets].push(new_pet)
   return total_pet
+end
+
+def customer_cash(id_of_customer)
+  id_of_customer[:cash]
 end
